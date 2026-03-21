@@ -20,7 +20,7 @@ body {
 
 main {
     width: 100%;
-    height: 86vh;
+    height: 100vh;
 }
 
 header {
@@ -110,7 +110,6 @@ button {
 
 .featured-recipes .container {
     padding: 20px;
-    /* padding-left: 0 !important; */
 }
 
 .featured-recipes h2 {
@@ -163,11 +162,13 @@ figcaption {
     display: flex; 
 }
 .comparison .image img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover; 
-    border-radius: 3%;
-    margin-top: 40px;
+width: 100%;
+    height: 231px;
+    /* object-fit: cover; */
+    width: 100%;
+    max-width: 1440px;
+    margin: 0;
+    padding-right: 60px;
 }
 
 .comparison h2 {
@@ -193,3 +194,174 @@ h2 {
 p {
     font-size: 14px;
 }
+
+.sectionHowMany{
+    padding: 30px 60px 10px 60px;
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    gap: 15px;
+    margin: 0;
+}
+
+.label {
+    text-align: center;;
+}
+
+.portionValue {
+    height: 32px;
+    width: 50px;
+    padding: 0 5px;
+    border-radius: 8px 0 0 8px;
+}
+
+.inputButton {
+    display: flex;
+}
+
+
+.sectionTable {
+    padding: 0px 60px 30px 60px;
+    /* display: flex; */
+    width: 100%;
+    max-width: 1440px;
+    margin: 0;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+}
+
+.tdLeft {
+ width: 120px;
+ border-radius: 8px 0 0 8px;
+ padding-left: 35px;
+}
+
+.tdRight {
+    border-radius: 0 8px 8px 0;
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(239, 239, 239);
+}
+
+#error {
+    margin: 0;
+    padding: 0 60px 0 60px;
+    display: flex;
+    max-width: 1440px;
+    margin: 0;
+    color:red;
+}
+
+.header img {
+    max-width: 1440px;
+    height: 128px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.recipeInfo {
+    padding-top: 30px;
+    padding-left: 60px;
+}
+.recipeInfo span {
+
+    background-color: rgb(226, 225, 225); 
+    color: rgb(64,59,73);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.inputButton button {
+    padding: 8px 38px;
+    margin-top: 0 !important;
+}
+
+
+.infos {
+    padding-right: 60px;
+    display: flex;
+    gap: 15px;
+}
+.howto {
+    padding-left: 60px;
+    padding-right: 60px;
+    max-width: 1440px;
+
+}
+
+.creator {
+    padding-left: 60px;
+}
+
+.creator h2{
+    padding-top: 30px;
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+} 
+
+.headerRecipe h1{
+    padding-bottom: 15px;
+    padding-top: 10px;
+    font-size: 24px;
+
+}
+
+.headerRecipe {
+    padding: 0 60px;
+}
+
+.headerRecipe img {
+    width: 100%;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.howToInfo span {
+    background-color: rgb(226, 225, 225);
+    color: rgb(64, 59, 73);
+    border-radius: 8px;
+    padding: 5px;
+
+}
+
+.creator {
+    text-align: left;
+}
+
+.creator .row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.creator img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: 50% 20%;
+    border-radius: 50%;
+}
+
+.infos span img.icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+
+}
+
