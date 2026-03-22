@@ -4,34 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koch Welt</title>
-    <link rel="icon" type="image/png" href="./img/logo_small.png">
-
-    <link rel="stylesheet" href="./styles/global.css">
-    <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="./styles/recipe.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="./scripts/rezept.js" ></script>
-    <script src="./scripts/hamburger.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     
 
+
     <header>
         <div class="container">
             <div class="logo">
+                
                 <img src="./img/logo.png" alt="Koch Welt Logo" 
-                onclick="window.location.href='#'" 
+                 onclick="window.location.href='/'" 
                 style="cursor: pointer;">
+
             </div>
-            <button class="hamburger" aria-label="Navigation">
-                <img src="./img/icons/hamburger.png" alt="Menu">
-            </button>
-            <nav class="nav-menu">
+            <nav>
                 <ul>
                     <li><a href="/">Start</a></li>
-                    <li><a href="/recipe-bolognes.html">Rezept des Tages</a></li>
+                    <li><a href="recipe-bolognes.html">Rezept des Tages</a></li>
                     <li><a href="/contact.html">Kontakt</a></li>
                     <li><a href="/impressum.html">Impressum</a></li>
                 </ul>
@@ -40,72 +34,99 @@
     </header>
 
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <article>
-                    <img src="./img/spaghetti-bolognese.webp" alt="Bild von einem croissant">
-                    <div class="text">
-                     <h2>Spaghetti Bolognese</h2>
-                    <p>Schmackhafte Spaghetti Bolognese gelingen auch zu Hause kinderleicht. Mit nur 40 Minuten Aufwand kannst du ein leckeres, herzhaftes Abendessen für die ganze Familie zaubern.</p>
-                    <button onclick="window.location.href='/recipe-bolognes.html'">Rezept öffnen</button>
-                </div>
-                </article>
-            </div>
-        </section>
+<main>
 
-        <section class="featured-recipes">
-            <div class="container">
-                <h2>Lust auf was Neues ?</h2>
+    <div class="recipe-content">
 
-                <div class="cards">
-                    <article>
-                        <figure>
-                            <img src="./img/croissant.jpg" alt="Bild von einem croissant">
-                            <figcaption>Frische Croissants</figcaption>
-                        </figure>
-                    </article>
+        
+<section class="headerRecipe">
+    <h1>Spaghetti Bolognese</h1>
 
-                    <article>
-                        <figure>
-                            <img src="./img/croissant.jpg" alt="Bild von einem croissant">
-                            <figcaption>Frische Croissants</figcaption>
-                        </figure>
-                    </article>
+    <img src="./img/spaghetti-bolognese.webp" alt="">
+</section>
 
-                    <article>
-                        <figure>
-                            <img src="./img/croissant.jpg" alt="Bild von einem croissant">
-                            <figcaption>Frische Croissants</figcaption>
-                        </figure>
-                    </article>
-                </div>
-            </div>
-        </section>
+<section class="recipeInfo">
+    <div class="infos">
+        <span><img src="./img/icons/clock-regular.svg" alt="Uhr" class="icon"> 30Min</span>
+        <span><img src="./img/icons/brain-solid.svg" alt="Schwierigkeitsgrad" class="icon"> Simple</span>
+        <span><img src="./img/icons/clock-regular.svg" alt="Datum" class="icon"> 20.03.2026</span>
+    </div>
+</section>
 
-        <section class="comparison">
-            <div class="container">
-                <div class="text">
-                    <h2>Warum du Bananen nicht im Kühlschrank lagern solltest</h2>
-                    <p>
-                Bananen mögen es warm - kühl und frostig ist ihr natürlicher Feind! Wenn du sie in den Kühlschrank legst, passiert etwas Merkwürdiges: Die Schale wird dunkel, fast schwarz, und das sieht nicht nur unappetitlich aus - auch der Geschmack leidet.
-                Im Kühlschrank verlangsamt sich zwar die Reifung des Fruchtfleisches, aber die Kälte zerstört die Zellstruktur der Bananenhaut. Das führt dazu, dass die Banane matschig wird und ihr süßer, aromatischer Geschmack verloren geht.
-                Fazit: Bananen gehören auf den Obstteller, nicht in die Kühlung. Dort reifen sie gleichmäßig, bleiben saftig und lecker - und sehen dazu noch richtig einladend aus! 
 
-                    </p>
-                </div>
-                <div class="image">
-                    <img src="./img/banana.png" alt="banana">
-                </div>
-            </div>
-        </section>
-    </main>
+    <section class="sectionHowMany">
+        <label class="label" for="portionValue">Zutaten für:</label>
+
+        <div class="inputButton">
+            <input 
+                type="number" 
+                class="portionValue"
+                id="portionValue" 
+                value="4" 
+                min="1" 
+                max="50"
+            >
+            <button class="button" onclick="calculateTable()">Portionen</button>
+        </div>
+    </section>
+    <p id="error"></p>
+
+    <section class="sectionTable ">
+        <table id="recipeTable">
+            <thead>
+
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </section>
+    <section class="howto">
+
+
+        <h2>Zubereitung</h2>
+
+<section class="howToInfo ">
+     
+    <div class="infos">
+        <span><img src="./img/icons/clock-regular.svg" alt="Uhr" class="icon">ca. 30 Minuten</span>
+        <span><img src="./img/icons/clock-regular.svg" alt="Datum" class="icon"> Gesamtzeit ca. 30 Minuten</span>
+    </div>
+
+     <br>
+    <br>
+</section>
+
+    <p>
+            Zwiebel, Knoblauch und Möhre schälen und in feine Würfel schneiden.
+            Hackfleisch in die Pfanne geben, langsam erhitzen und im eigenen Fett unter Rühren anbraten. Salzen und pfeffern. Zwiebeln, Knoblauch und Möhren dazugeben und kurz mitbraten. Mit der Brühe ablöschen. Dann Tomatenmark, Oregano, die stückigen Tomaten und Tomatenketchup unterrühren. Etwa 40 Minuten einkochen lassen.
+            Spaghetti in Salzwasser bissfest kochen. Durch ein Sieb abgießen, mit kaltem Wasser abschrecken und zusammen mit der Sauce servieren.
+
+            Tipp: Die Sauce Bolognese schmeckt auch lecker zu Reis.
+
+    </p>
+    <br>
+    </section>
+
+<section class="creator">
+    <h2>Rezept erstellt von</h2>
+
+    <div class="row">
+        <img src="./img/manuel.jpg">
+        <span>Manuel</span>
+    </div>
+</section>
+
+    </div>
+
+</main>
 
 
     <footer>
         <div class="container">
-            
         </div>
     </footer>
+        <script src="./rezept.js"></script>
+
 </body>
 </html>
