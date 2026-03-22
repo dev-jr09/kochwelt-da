@@ -46,3 +46,26 @@ strong {
     color: rgb(64,59,73);
     font-weight: 600;
 }
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.social-links li {
+    margin: 8px 0;
+}
+
+.social-links a {
+    color: rgb(0,128,0);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+}
