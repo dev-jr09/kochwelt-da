@@ -19,6 +19,12 @@
     height: 600px;
 }
 
+.contact input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
 .contact label {
     display: flex;
     flex-direction: column;
@@ -28,6 +34,8 @@
 textarea[name="message"] {
     min-height: 250px;
     resize: vertical;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
 .contact button {
