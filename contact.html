@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koch Welt</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                
+                <img src="./img/logo.png" alt="Koch Welt Logo" 
+                 onclick="window.location.href='/'" 
+                style="cursor: pointer;">
+
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Start</a></li>
+                    <li><a href="recipe-bolognes.html">Rezept des Tages</a></li>
+                    <li><a href="/contact.html">Kontakt</a></li>
+                    <li><a href="#">Impressum</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+  <main>
+        
+    <div class="main-contact">
+
+              <form class="contact" onsubmit="sendMail(event)">
+      <h2>Kontaktiere uns</h2>
+
+      <label>
+        Dein Name:
+        <input type="text" name="text">
+      </label>
+      <label>
+        Deine EMail:
+        <input type="email" name="email">
+      </label>
+      <label>
+        Deine Nachricht:
+        <textarea name="message"></textarea>
+      </label>
+      <button class="button" type="submit">Abschicken</button>
+    </form>
+    </div>
+
+      </main>
+
+
+    <footer>
+        <div class="container">
+        </div>
+    </footer>
+        
+</body>
+</html>
