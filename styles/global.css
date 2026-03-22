@@ -1,5 +1,5 @@
 :root {
-    --spacing-padding: 180px;
+    --spacing-padding: 120px;
 }
 
 /* Responsive Padding */
@@ -190,7 +190,7 @@ header nav {
 
     header nav {
         align-self: flex-end;
-        margin-bottom: 8px;
+        margin-bottom: 0px;
     }
 }
 
