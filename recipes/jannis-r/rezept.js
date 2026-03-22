@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', updateRecipe);
 
 function updateRecipe() {
   const portionenInput = document.getElementById('portionValue');
-  const portionen = Number(portionenInput.value);
+  let portionen = Number(portionenInput.value);
   const tabBody = document.querySelector('#recipeTable tbody');
   const errorMsg = document.getElementById('error');
 
@@ -29,16 +29,15 @@ function updateRecipe() {
 
   if (portionen < 1 || portionen > 50 || isNaN(portionen)) {
     errorMsg.textContent = 'Bitte geben Sie eine gültige Portionszahl (1 - 50) ein.';
-    portionenInput.value = STANDARD_MENGE;
-    return;
+    portionen = STANDARD_MENGE;
   }
 
   tabBody.innerHTML = '';
 
   for (let i = 0; i < zutaten.length; i++) {
     const skalierterWert = (mengen[i] * portionen) / STANDARD_MENGE;
-    const displayWert = skalierterWert % 1 === 0 ? skalierterWert : skalierterWert.toFixed(2);
-    const displayEinheit = einheiten[i] ? `${displayWert} ${einheiten[i]}` : displayWert;
+    const displayWert = Number(skalierterWert.toFixed(2));
+    const displayEinheit = einheiten[i] ? `${displayWert} ${einheiten[i]}` : `${displayWert}`;
 
     tabBody.innerHTML += `
       <tr>
@@ -49,3 +48,4 @@ function updateRecipe() {
 }
 
 document.getElementById('portionValue').addEventListener('input', updateRecipe);
+
