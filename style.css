@@ -1,106 +1,371 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koch Welt</title>
-    <link rel="icon" type="image/png" href="./img/logo_small.png">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Raleway;
+}
 
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="./rezept.js" ></script>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-    <header>
-        <div class="container">
-            <div class="logo">
-                
-                <img src="./img/logo.png" alt="Koch Welt Logo" 
-                onclick="window.location.href='#'" 
-                style="cursor: pointer;">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/">Start</a></li>
-                    <li><a href="/recipe-bolognes.html">Rezept des Tages</a></li>
-                    <li><a href="#">Kontakt</a></li>
-                    <li><a href="#">Impressum</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    background-color: #fff;
+    height: 8vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 10px -10px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+}
+
+header .logo img {
+    height: 68px; 
+}
+
+header nav {
+    margin-top: 40px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: rgb(64,59,73);
+    font-weight: 600;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+    color: rgb(0,128,0);
+}
+
+.hero {
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.hero article {
+    display: flex;
+    gap: 40px;
+}
+
+.hero img {
+    height: 220px;
+    border-radius: 3%;
+}
+
+.hero .text {
+    max-width: 600px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: rgb(0,128,0);
+    color: white;
+    padding: 11px 38px;
+    margin-top: 36px;
+    /* margin-left: 25px; */
+    border: none;
+
+}
+
+.featured-recipes {
+    margin-top: 50px;
+    background-color: rgb(239,239,239);
+    width: 100%;
+}
+
+.featured-recipes .container {
+    padding: 20px;
+}
+
+.featured-recipes h2 {
+    text-align: center;
+    margin-top: 20px;
+}
 
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <article>
-                    <img src="./img/spaghetti-bolognese.webp" alt="Bild von einem croissant">
-                    <div class="text">
-                     <h2>Spaghetti Bolognese</h2>
-                    <p>Schmackhafte Spaghetti Bolognese gelingen auch zu Hause kinderleicht. Mit nur 40 Minuten Aufwand kannst du ein leckeres, herzhaftes Abendessen für die ganze Familie zaubern.</p>
-                    <button onclick="window.location.href='/recipe-bolognes.html'">Rezept öffnen</button>
-                </div>
-                </article>
-            </div>
-        </section>
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
 
-        <section class="featured-recipes">
-            <div class="container">
-                <h2>Lust auf was Neues ?</h2>
+}
 
-                <div class="cards">
-                    <article>
-                        <figure>
-                            <img src="./img/croissant.jpg" alt="Bild von einem croissant">
-                            <figcaption>Frische Croissants</figcaption>
-                        </figure>
-                    </article>
+.cards article {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
 
-                    <article>
-                        <figure>
-                            <img src="./img/croissant.jpg" alt="Bild von einem croissant">
-                            <figcaption>Frische Croissants</figcaption>
-                        </figure>
-                    </article>
+}
 
-                    <article>
-                        <figure>
-                            <img src="./img/croissant.jpg" alt="Bild von einem croissant">
-                            <figcaption>Frische Croissants</figcaption>
-                        </figure>
-                    </article>
-                </div>
-            </div>
-        </section>
+.cards img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 3%;
 
-        <section class="comparison">
-            <div class="container">
-                <div class="text">
-                    <h2>Warum du Bananen nicht im Kühlschrank lagern solltest</h2>
-                    <p>
-                Bananen mögen es warm - kühl und frostig ist ihr natürlicher Feind! Wenn du sie in den Kühlschrank legst, passiert etwas Merkwürdiges: Die Schale wird dunkel, fast schwarz, und das sieht nicht nur unappetitlich aus - auch der Geschmack leidet.
-                Im Kühlschrank verlangsamt sich zwar die Reifung des Fruchtfleisches, aber die Kälte zerstört die Zellstruktur der Bananenhaut. Das führt dazu, dass die Banane matschig wird und ihr süßer, aromatischer Geschmack verloren geht.
-                Fazit: Bananen gehören auf den Obstteller, nicht in die Kühlung. Dort reifen sie gleichmäßig, bleiben saftig und lecker - und sehen dazu noch richtig einladend aus! 
+}
 
-                    </p>
-                </div>
-                <div class="image">
-                    <img src="./img/banana.png" alt="banana">
-                </div>
-            </div>
-        </section>
-    </main>
+figcaption {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.comparison {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; 
+    margin-top: 40px;
+    gap: 20px; 
+    padding-bottom: 30px;
+}
+
+.comparison .text {
+    flex: 1; 
+}
+.comparison .container {
+    display: flex; 
+}
+.comparison .image img {
+width: 100%;
+    height: 231px;
+    /* object-fit: cover; */
+    width: 100%;
+    max-width: 1440px;
+    margin: 0;
+    padding-right: 60px;
+}
+
+.comparison h2 {
+    text-align: center;
+
+}
+
+.comparison p {
+    padding-top: 25px;
+    padding-right: 40px;
+}
+
+footer {
+    position: relative;
+    background-color: rgb(64,59,59);
+    height: 19vh;  
+}
+
+h2 {
+    font-size: 19px;
+}
+
+p {
+    font-size: 14px;
+}
+
+.sectionHowMany{
+    padding: 30px 60px 10px 60px;
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    gap: 15px;
+    margin: 0;
+}
+
+.label {
+    text-align: center;;
+}
+
+.portionValue {
+    height: 32px;
+    width: 50px;
+    padding: 0 5px;
+    border-radius: 8px 0 0 8px;
+}
+
+.inputButton {
+    display: flex;
+}
 
 
-    <footer>
-        <div class="container">
-            
-        </div>
-    </footer>
-</body>
-</html>
+.sectionTable {
+    padding: 0px 60px 30px 60px;
+    /* display: flex; */
+    width: 100%;
+    max-width: 1440px;
+    margin: 0;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+}
+
+.tdLeft {
+ width: 120px;
+ border-radius: 8px 0 0 8px;
+ padding-left: 35px;
+}
+
+.tdRight {
+    border-radius: 0 8px 8px 0;
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(239, 239, 239);
+}
+
+#error {
+    margin: 0;
+    padding: 0 60px 0 60px;
+    display: flex;
+    max-width: 1440px;
+    margin: 0;
+    color:red;
+}
+
+.header img {
+    max-width: 1440px;
+    height: 128px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.recipeInfo {
+    padding-top: 30px;
+    padding-left: 60px;
+}
+.recipeInfo span {
+
+    background-color: rgb(226, 225, 225); 
+    color: rgb(64,59,73);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.inputButton button {
+    padding: 8px 38px;
+    margin-top: 0 !important;
+}
+
+
+.infos {
+    padding-right: 60px;
+    display: flex;
+    gap: 15px;
+}
+.howto {
+    padding-left: 60px;
+    padding-right: 60px;
+    max-width: 1440px;
+
+}
+
+.creator {
+    padding-left: 60px;
+}
+
+.creator h2{
+    padding-top: 30px;
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+} 
+
+.headerRecipe h1{
+    padding-bottom: 15px;
+    padding-top: 10px;
+    font-size: 24px;
+
+}
+
+.headerRecipe {
+    padding: 0 60px;
+}
+
+.headerRecipe img {
+    width: 100%;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.howToInfo span {
+    background-color: rgb(226, 225, 225);
+    color: rgb(64, 59, 73);
+    border-radius: 8px;
+    padding: 5px;
+
+}
+
+.creator {
+    text-align: left;
+    padding-bottom: 25px;
+}
+
+.creator .row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.creator img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: 50% 20%;
+    border-radius: 50%;
+}
+
+.infos span img.icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+
+}
+
