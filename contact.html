@@ -40,23 +40,30 @@
         
     <div class="main-contact">
 
-              <form class="contact" onsubmit="sendMail(event)">
-      <h2>Kontaktiere uns</h2>
 
-      <label>
-        Dein Name:
-        <input type="text" name="text">
-      </label>
-      <label>
-        Deine EMail:
-        <input type="email" name="email">
-      </label>
-      <label>
-        Deine Nachricht:
-        <textarea name="message"></textarea>
-      </label>
-      <button class="button" type="submit">Abschicken</button>
-    </form>
+        <form class="contact" action="https://formspree.io/f/xojkgqal" method="POST">
+  <h2>Kontaktiere uns</h2>
+
+  <label>
+    Dein Name:
+    <input type="text" name="name" required>
+  </label>
+
+  <label>
+    Deine E-Mail:
+    <input type="email" name="email" required>
+  </label>
+
+  <label>
+    Deine Nachricht:
+    <textarea name="message" required></textarea>
+  </label>
+
+  <button class="button" type="submit">Abschicken</button>
+</form>
+
+
+
     </div>
 
       </main>
