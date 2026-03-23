@@ -120,3 +120,42 @@ figcaption {
     padding-top: 25px;
     padding-right: 40px;
 }
+
+@media (max-width: 800px) {
+
+    body {
+        text-align: center;
+    }
+    .cards {
+        display: flex;
+        flex-direction: column; /* untereinander */
+        gap: 16px; /* Abstand */
+    }
+
+    .cards img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+.hero article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 200px;
+
+}
+.hero img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+
+}
+.hero {
+    height: 400px;
+}
+.comparison .lower {
+    display: flex;
+    flex-direction: column;
+}
+}

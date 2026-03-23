@@ -157,3 +157,10 @@ tr:nth-child(odd) {
     object-fit: cover;
     border-radius: 8px;
 }
+
+@media (max-width: 394px) {
+
+    .sectionHowMany {
+        display: block;
+    }
+}
