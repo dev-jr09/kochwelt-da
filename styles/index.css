@@ -128,8 +128,8 @@ figcaption {
     }
     .cards {
         display: flex;
-        flex-direction: column; /* untereinander */
-        gap: 16px; /* Abstand */
+        flex-direction: column;
+        gap: 16px;
     }
 
     .cards img {
