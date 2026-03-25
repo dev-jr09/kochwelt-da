@@ -157,5 +157,11 @@ figcaption {
 .comparison .lower {
     display: flex;
     flex-direction: column;
+
+}
+.comparison p {
+    padding-right: 0px;
+    padding-right: 0px;
+
 }
 }
