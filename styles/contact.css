@@ -36,6 +36,9 @@ textarea[name="message"] {
     resize: vertical;
     border: 1px solid #ccc;
     border-radius: 8px;
+    font-size: 18px;
+    padding: 10px;
+
 }
 
 
