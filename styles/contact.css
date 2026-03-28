@@ -59,3 +59,69 @@ textarea[name="message"] {
     scale: 1.05;
     cursor: pointer;
 }
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .main-contact {
+        padding: 40px 20px;
+        min-height: auto;
+    }
+
+    .contact {
+        max-width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .contact button {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    textarea[name="message"] {
+        min-height: 200px;
+    }
+}
+
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    .main-contact {
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .contact {
+        max-width: 100%;
+        height: auto;
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .contact input,
+    textarea[name="message"] {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    textarea[name="message"] {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    .contact label {
+        gap: 4px;
+        font-size: 14px;
+    }
+
+    .contact button {
+        width: 100%;
+        padding: 10px 16px;
+        margin: 10px auto 0 auto;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+}
