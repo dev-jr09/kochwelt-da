@@ -132,10 +132,16 @@ figcaption {
         gap: 16px;
     }
 
+    .cards article {
+        width: 100%;
+    }
+
     .cards img {
         width: 100%;
+        max-width: 250px;
         height: 200px;
         object-fit: cover;
+        margin: 0 auto;
     }
 
 .hero article {
